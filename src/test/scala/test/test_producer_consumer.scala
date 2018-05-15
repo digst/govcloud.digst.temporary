@@ -15,7 +15,7 @@ class test_producer_consumer {
   val pathConfigProducer:String = Resources.getResource("config/producer.properties").getPath
 
   val pathConfigConsumer:String = Resources.getResource("config/consumer.properties").getPath
-  val pathConfigFiles:String = Resources.getResource("files").getPath
+  val pathConfigFiles:String = "/home/datascience/GovcloudData/files/"
 
 
 
