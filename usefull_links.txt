@@ -1,0 +1,2 @@
+http://repository.mapr.com/nexus/content/groups/mapr-public/org/
+https://dzone.com/articles/scala-in-java-maven-project

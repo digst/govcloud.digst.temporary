@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.kafka:kafka-log4j-appender:1.0.1-mapr-1803">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-log4j-appender/1.0.1-mapr-1803/kafka-log4j-appender-1.0.1-mapr-1803.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-log4j-appender/1.0.1-mapr-1803/kafka-log4j-appender-1.0.1-mapr-1803-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-log4j-appender/1.0.1-mapr-1803/kafka-log4j-appender-1.0.1-mapr-1803-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

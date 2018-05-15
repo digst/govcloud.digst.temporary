@@ -1,0 +1,602 @@
+datascience@datascience-ThinkPad-P51:~$ history | grep docker
+ 1003  docker container restart gitlab-test
+ 1004  docker container list
+ 1012  docker container inspect gitlab-test
+ 1013  docker container stop gitlab-test
+ 1014  docker container start --hostname=gitlab.test.com gitlab-test
+ 1016  cd docker
+ 1024  cd /var/lib/docker/containers
+ 1025  sudo service docker stop
+ 1029  cd /var/lib/docker/containers/85407edd74551453c2f0d8986ea6b2517804f0aacf671b8334663b131dc016fe
+ 1030  sudo /var/lib/docker/containers/85407edd74551453c2f0d8986ea6b2517804f0aacf671b8334663b131dc016fe/config.json
+ 1031  sudo /var/lib/docker/containers/gitlab-test
+ 1032  sudo /var/lib/docker/containers/gitlab-test/config.json
+ 1033  sudo cat /var/lib/docker/containers/gitlab-test/config.json
+ 1034  sudo service docker start
+ 1035  docker container list
+ 1036  docker start artifactory
+ 1037  history | grep docker
+ 1038  docker stop gitlab-test && docker rm gitlab-test
+ 1039  docker container list
+ 1040  docker run --detach     --hostname gitlab.example.com     --publish 443:443 --publish 80:80 --publish 22:22     --name gitlab     --restart always     --volume /srv/gitlab/config:/etc/gitlab:Z     --volume /srv/gitlab/logs:/var/log/gitlab:Z     --volume /srv/gitlab/data:/var/opt/gitlab:Z \
+ 1041  docker run --detach  --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1042  docker stop gitlab-test && docker rm gitlab-test
+ 1043  docker run --detach --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1044  docker stop gitlab-test && docker rm gitlab-test
+ 1045  docker stop gitlab && docker rm gitlab
+ 1046  docker run --detach --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1047  docker container list
+ 1048  docker stop gitlab && docker rm gitlab
+ 1049  docker run --detach --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1050  docker stop gitlab && docker rm gitlab
+ 1051  docker run --detach --publish 443:444 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1052  docker stop gitlab && docker rm gitlab
+ 1053  docker run --detach --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1054  docker container list
+ 1055  docker container inspect gitlab
+ 1058  docker stop gitlab && docker rm gitlab
+ 1059  docker run --detach --hostname localhost --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1060  docker container list
+ 1061  docker container inspect gitlab
+ 1062  docker container list
+ 1063  docker stop gitlab && docker rm gitlab
+ 1064  docker run --detach --hostname localhost --publish 444:443 --publish 81:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1065  docker container list
+ 1067  docker container list
+ 1068  docker inspect gitlab
+ 1069  docker stop gitlab && docker rm gitlab
+ 1070  docker run --detach --hostname localhost --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1071  docker run --detach --hostname localhost --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1072  docker container list
+ 1073  docker stop gitlab && docker rm gitlab
+ 1074  docker run --detach --hostname localhost --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1075  docker container list
+ 1077  histor| grep docker
+ 1079  history| grep docker
+ 1088  docker container inspect gitlab-runner
+ 1090  history | grep docker
+ 1092  docker exec -it gitlab-runner gitlab-runner register
+ 1093  docker container inspect gitlab
+ 1094  docker exec -it gitlab-runner gitlab-runner register
+ 1096  docker exec -it gitlab-runner gitlab-runner register
+ 1098  docker exec -it gitlab-runner gitlab-runner register
+ 1100  docker container inspect gitlab-runner
+ 1101  docker stop gitlab && docker rm gitlab
+ 1102  docker run --detach --hostname 172.17.0.3 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1103  docker container list
+ 1104  docker container inspect gitlab
+ 1106  docker exec -it gitlab-runner gitlab-runner register
+ 1108  docker container inspect artifactory
+ 1109  history | grep docker
+ 1110  docker container list
+ 1111  docker start artifactory
+ 1112  docker stop artifactory && docker rm artifactory
+ 1113  $ docker run --restart always --name artifactory -d -p 8081:8081 docker.bintray.io/jfrog/artifactory-oss:latest
+ 1114  docker run --restart always --name artifactory -d -p 8081:8081 docker.bintray.io/jfrog/artifactory-oss:latest
+ 1115  docker container list
+ 1116  docker stop artifactory && docker rmi artifactory
+ 1117  docker stop artifactory && docker rm artifactory
+ 1118  docker volume ls
+ 1119  docker run --restart always --name artifactory -d -p 8081:8081 docker.bintray.io/jfrog/artifactory-oss:latest
+ 1120  docker stop artifactory && docker rm -v artifactory
+ 1121  docker run --restart always --name artifactory -d -p 8081:8081 docker.bintray.io/jfrog/artifactory-oss:latest
+ 1122  docker stop artifactory && docker rm -v artifactory
+ 1123  history | grep docker
+ 1126  docker run --name artifactory --restart always -p 8081:8081 -v $ARTIFACTORY_HOME/data -v $ARTIFACTORY_HOME/LOGS -v $ARTIFACTORY_HOME/backup -v $ARTIFACTORY_HOME/etc docker.bintray.io/jfrog/artifactory-oss
+ 1127  docker start artifactory
+ 1128  docker container inspect artifactory
+ 1129  docker container list
+ 1131  docker stop gitlab
+ 1132  docker rm gitlab
+ 1133  docker pull gitlab/gitlab-ce:latest
+ 1134  docker run --detach --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1135  docker container list
+ 1136  docker run --detach --publish 443:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1137  docker start gitlab
+ 1138  docker rm gitlab
+ 1139  docker run --detach --publish 445:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1140  docker container list
+ 1141  docker container inspect gitlab
+ 1142  docker stop gitlab
+ 1143  docker rm gitlab
+ 1144  history | grep docker
+ 1145  docker run --detach --hostname 172.17.0.3 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1146  docker container inspect gitlab
+ 1147  docker container list
+ 1148  docker container inspect gitlab
+ 1149  docker pull gitlab/gitlab-ce:8.8
+ 1150  docker pull gitlab/gitlab-ce:8.8.0
+ 1151  docker pull gitlab/gitlab-ce:8.8.4
+ 1152  history | grep docker
+ 1153  history | grep "docker run
+ 1154  history | grep "docker run"
+ 1155  history | grep "docker run gitlab-runner"
+ 1156  history | grep "docker run"
+ 1157  history | grep "docker run gitlab-runner"
+ 1158  history | grep docker
+ 1159  docker run -d --name gitlab-runner --restart always   -v /srv/gitlab-runner/config:/etc/gitlab-runner   -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner:latest
+ 1160  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner-docker/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner:latest
+ 1161  docker container list
+ 1162  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1163  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner-docker/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner:alpinec
+ 1164  docker container list
+ 1165  docker container inspect gitlab-runner-docker
+ 1166  docker container inspect gitlab-runner
+ 1173  sudo gedit docker.sock
+ 1174  docker exec -it gitlab-runner-docker register
+ 1175  docker container exec -it gitlab-runner-docker register
+ 1176  history | grep docker
+ 1177  docker exec -it gitlab-runner-docker gitlab-runner-docker register
+ 1178  docker exec -it gitlab-runner gitlab-runner register
+ 1179  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1180  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner/config:/etc/gitlab-runner-docker -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1181  docker container list
+ 1182  docker container inspect gitlab-runner-docker
+ 1183  docker exec -it gitlab-runner-docker gitlab-runner-docker register
+ 1184  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1185  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1186  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1187  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner-docker/config:/etc/gitlab-runner-docker -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1188  docker container list
+ 1189  docker container inspect gitlab-runner-docker
+ 1190  docker exec -it gitlab-runner-docker gitlab-runner-docker register
+ 1191  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1192  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1193  docker container inspect gitlab-runner-docker
+ 1194  docker container list
+ 1195  docker exec -it gitlab-runner-docker gitlab-runner-docker register
+ 1196  history | grep docker
+ 1197  docker exec -it gitlab-runner gitlab-runner register
+ 1198  docker exec -it gitlab-runner-docker gitlab-runner-docker register
+ 1199  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1200  docker stop gitlab-runner-docker && docker rm gitlab-runner-docker
+ 1201  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner-docker/config:/etc/gitlab-runner-docker -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1202  docker container list
+ 1203  docker exec -it gitlab-runner-docker register
+ 1204  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1205  history | grep docker
+ 1206  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1207  docker container inspect gitlab-runner-docker
+ 1208  history | grep docker
+ 1209  docker container inspect gitlab
+ 1210  docker container list
+ 1211  docker container inspect gitlab-runner
+ 1212  docker container inspect gitlab
+ 1213  docker exec -it gitlab-runner gitlab-runner register
+ 1214  docker container stop gitlab && docker container rm gitlab
+ 1215  history | grep docker
+ 1216  docker run --detach --hostname 172.17.0.3 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1217  docker container stop gitlab && docker container rm gitlab
+ 1218  docker run --detach --hostname 172.17.0.4 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1219  docker container list
+ 1220  docker container inspect gitlab
+ 1221  docker container inspect artifactory
+ 1222  docker container list
+ 1233  docker container list
+ 1236  docker container list
+ 1237  docker container stop 174
+ 1238  docker container list
+ 1239  docker container stop 12ced
+ 1240  docker container stop f1bf56
+ 1241  docker container stop 720af
+ 1242  docker container stop 7fa96
+ 1243  docker container list
+ 1244  docker stop *
+ 1245  docker stop $(docker ps -q)
+ 1246  docker container list
+ 1247  docker stop $(docker ps -q)
+ 1248  docker container list
+ 1249  docker stop *
+ 1252  docker status localkube
+ 1263  docker info
+ 1285  sudo service docker stop
+ 1287  systemctl restart docker.service
+ 1288  docker version
+ 1289  docker info
+ 1290  sudo service docker stop
+ 1293  cd docker.service
+ 1295  cd docker.service.d/docker-thinpool.conf
+ 1296  gedit docker.service.d/docker-thinpool.conf
+ 1297  sudo gedit docker.service.d/docker-thinpool.conf
+ 1305  cd docker/
+ 1309  cd docker/
+ 1310  sudo docker/
+ 1311  sudo cd docker/
+ 1312  sudo gedit docker/daemon.json
+ 1315  cd docker
+ 1320  sudo service docker stop
+ 1321  docker container list
+ 1324  gedit docker.sock
+ 1325  sudo gedit docker.sock
+ 1326  sudo cat docker.sock
+ 1327  sudo systemctl start docker
+ 1328  docker container list
+ 1329  docker info
+ 1330  sudo systemctl stop docker
+ 1332  cd /var/lib/docker
+ 1335  cd /etc/default/docker
+ 1337  sudo cat /etc/systemd/system/docker.service
+ 1338  docker info
+ 1339  cat /var/run/docker.sock
+ 1345  systemctl edit docker.service
+ 1346  sudo systemctl edit docker.service
+ 1347  sudo systemctl gedit docker.service
+ 1348  sudo systemctl edit docker.service
+ 1350  sudo service docker start
+ 1351  docker info
+ 1355  sudo service stop docker
+ 1356  sudo service docker stop
+ 1357  sudo service docker --exec-opt native.cgroupdriver=systemd start
+ 1358  sudo service docker --exec-opt native.cgroupdriver=systemd
+ 1359  sudo service docker start --exec-opt native.cgroupdriver=systemd
+ 1360  docker info
+ 1362  docker info
+ 1363  docker exec native.cgroupdriver=systemd
+ 1364  docker --exec-opt native.cgroupdriver=systemd
+ 1365  sudo gedit /etc/systemd/system/docker.service.d/docker-thinpool.conf
+ 1366  gedit /etc/systemd/system/docker.service.d/docker-thinpool.conf
+ 1367  sudo gedit /etc/systemd/system/docker.service.d/docker-thinpool.conf
+ 1369  docker info
+ 1370  docker info | grep Cgroup
+ 1371  sudo cat /etc/systemd/system/docker.service.d/docker-thinpool.conf
+ 1372  sudo cat /etc/default/docker
+ 1373  sudo gedit /etc/default/docker
+ 1375  systemctl restart docker.service
+ 1376  docker info
+ 1377  sudo gedit /etc/default/docker
+ 1378  sudo gedit /var/lib/docker
+ 1379  cd /var/lib/docker
+ 1381  docker container list
+ 1382  docker container inspect gitlab
+ 1383  docker info
+ 1384  sudo gedit /etc/systemd/system/docker.service.d
+ 1388  docker info
+ 1390  cd docker
+ 1393  sudo gedit /etc/systemd/system/docker.service.d/override.conf
+ 1397  docker
+ 1398  sudo gedit docker
+ 1399  sudo service docker stop
+ 1402  sudo systemctl restart docker
+ 1403  docker info
+ 1404  sudo gedit docker
+ 1407  sudo dockerd --exec-opt native.cgroupdriver=systemd.
+ 1408  sudo service docker stop
+ 1409  sudo dockerd --exec-opt native.cgroupdriver=systemd.
+ 1410  sudo docker --exec-opt native.cgroupdriver=systemd.
+ 1411  sudo dockerd --exec-opt native.cgroupdriver=systemd.
+ 1412  docker info
+ 1413  sudo dockerd --exec-opt native.cgroupdriver=systemd.
+ 1414  sudo service docker start
+ 1415  docker info
+ 1422  history | grep docker
+ 1424  docker container list
+ 1425  history | grep docker
+ 1428  docker container list
+ 1433  docker container list
+ 1438  systemctl status docker
+ 1439  sudo gedit /lib/systemd/system/docker.service
+ 1441  sudo systemctl docker restart
+ 1442  sudo systemctl restart docker
+ 1443  docker info
+ 1444  docker container list
+ 1464  sudo ./oc tag --source=docker openshift/deployment-example:v1 deployment:latest
+ 1469  docker container list
+ 1470  docker container inspect gitlab
+ 1471  docker container inspect artifactory
+ 1477  docker info
+ 1478  docker container list
+ 1479  docker image ls
+ 1480  docker run hello-world
+ 1481  docker container list
+ 1482  docker -it exec
+ 1483  docker exec -it gitlab-runner-docker register
+ 1484  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1485  docker container inspect gitlab
+ 1486  docker stop gitlab && docker rm gitlab
+ 1487  docker pull sameersbn/gitlab:8.13.3
+ 1488  docker run --name registry -d --restart=always -v /srv/gitlab/shared/registry:/registry -v ./certs:/certs --env 'REGISTRY_LOG_LEVEL=info' --env 'REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/registry' --env 'REGISTRY_AUTH_TOKEN_REALM=http://gitlab.example.com/jwt/auth' --env 'REGISTRY_AUTH_TOKEN_SERVICE=container_registry' --env 'REGISTRY_AUTH_TOKEN_ISSUER=gitlab-issuer' --env 'REGISTRY_AUTH_TOKEN_ROOTCERTBUNDLE=/certs/registry-auth.crt' --env 'REGISTRY_STORAGE_DELETE_ENABLED=true' registry:2.4.1
+ 1489  docker image list
+ 1490  docker run --detach --hostname 172.17.0.4 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1491  docker container inspect gitlab
+ 1492  docker run -d -p 5000:5000 --restart=always --name docker-registry registry:2
+ 1493  docker image list
+ 1494  docker container list
+ 1495  docker container inspect registry
+ 1496  docker container inspect docker-registry
+ 1497  docker pull ubuntu:16.04
+ 1498  docker tag ubuntu:16.04 172.17.0.6:5000/my-ubuntu
+ 1499  docker push 172.17.0.6:5000/my-ubuntu
+ 1500  docker image rm ubuntu:16.04
+ 1501  docker image remove 172.17.0.6:5000/my-ubuntu
+ 1502  docker pull 172.17.0.6:5000/my-ubuntu
+ 1503  docker container list
+ 1504  docker pull ubuntu:16.04
+ 1505  docker tag ubuntu:16.04 localhost:5000/my-ubuntu
+ 1506  docker push localhost:5000/my-ubuntu
+ 1507  docker image rm ubuntu:16.04
+ 1508  docker image remove localhost:5000/my-ubuntu
+ 1509  docker pull localhost:5000/my-ubuntu
+ 1510  docker image rm localhost:5000/my-ubuntu
+ 1511  docker pull localhost:5000/my-ubuntu
+ 1512  docker image rm localhost:5000/my-ubuntu
+ 1513  docker pull localhost:5000/my-ubuntu
+ 1514  docker image list
+ 1515  docker image rm localhost:5000/my-ubuntu
+ 1516  docker image list
+ 1517  docker stop docker-registry
+ 1518  docker rm -v docker-registry
+ 1519  docker run -d -p 5000:5000 --restart=always --name docker-registry -v /media/newhd/docker-volume:/var/lib/registry registry:2
+ 1524  docker stop docker-registry
+ 1525  docker rm -v docker-registry
+ 1526  docker run -d -p 5000:5000 --restart=always --name docker-registry -v /media/newhd/docker-volume:/var/lib/registry/ registry:2
+ 1527  docker pull ubuntu:16.04
+ 1528  docker tag ubuntu:16.04 localhost:5000/my-ubuntu
+ 1529  docker push localhost:5000/my-ubuntu
+ 1530  docker image rm ubuntu:16.04
+ 1531  docker image rm localhost:5000/my-ubuntu
+ 1532  docker pull localhost:5000/my-ubuntu
+ 1533  docker image rm localhost:5000/my-ubuntu
+ 1534  docker container list
+ 1547  history | grep docker
+ 1548  cd /srv/gitlab-runner-docker/
+ 1556  docer exec -it gitlab-runner-docker gitlab register
+ 1557  docker exec -it gitlab-runner-docker gitlab register
+ 1558  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1559  docker info
+ 1560  history | grep docker
+ 1561  docker container inspect docker-registry
+ 1564  cd gitlab-runner-docker/
+ 1566  docker exec docker-registry registry -version
+ 1567  docker container exec docker-registry registry -version
+ 1568  docker container exec docker-registry registry -v
+ 1569  cd /etc/docker/daemon.json
+ 1570  sudo gedit /etc/docker/daemon.json
+ 1571  docker info
+ 1572  sudo gedit /var/lib/docker/daemon.json
+ 1573  cd /var/lib/docker
+ 1575  docker container list
+ 1576  cd /srv/gitlab-runner-docker/
+ 1581  docker container list
+ 1584  cd docker.service
+ 1585  sudo gedit docker.service/docker.conf
+ 1591  docker info
+ 1592  sudo gedit /lib/systemd/system/docker.service
+ 1595  sudo service docker restart
+ 1596  docker container list
+ 1597  docker container inspect gitlab
+ 1598  docker container inspect docker-registry
+ 1599  sudo gedit /lib/systemd/system/docker.service
+ 1601  sudo service docker restart
+ 1602  sudo docker service stop
+ 1603  sudo service docker stop
+ 1604  docker container list
+ 1605  docker container inspect gitlab
+ 1606  docker container inspect artifactory
+ 1607  docker info
+ 1608  echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" "$CI_REGISTRY" --password-stdin
+ 1613  cd gitlab-runner-docker/
+ 1624  cd gitlab-runner-docker/
+ 1628  docker stop gitlab-runner-docker
+ 1629  docker rm -v gitlab-runner-docker
+ 1630  history | grep docker
+ 1636  docker run -d --name gitlab-runner-docker --restart always -v /srv/gitlab-runner-docker/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:alpine
+ 1640  cd gitlab-runner-docker/
+ 1644  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1652  docker container list
+ 1653  docker container inspect docker-registry
+ 1654  docker container list
+ 1655  sudo service docker stop
+ 1656  sudo gedit /lib/systemd/system/docker.service
+ 1657  sudo service docker stop
+ 1658  docker container list
+ 1659  sudo gedit /lib/systemd/system/docker.service
+ 1660  docker container inspect gitlab
+ 1661  docker container stop gitlab
+ 1662  docker container rm gitlab
+ 1663  history | grep docker
+ 1664  docker run --detach --hostname 172.17.0.4 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1665  docker container inspect gitlab
+ 1666  docker container stop gitlab
+ 1667  docker container rm gitlab
+ 1668  docker run --detach --hostname 172.17.0.5 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1669  docker inspect gitlab-runner-docker
+ 1670  docker container inspect docker-runner
+ 1671  docker container inspect gitlab-runner-docker
+ 1672  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1673  docker container inspect gitlab-runner-docker
+ 1674  docker container inspect gitlab
+ 1675  docker container inspect gitlab-runner-docker
+ 1676  docker container inspect gitlab
+ 1677  docker container stop gitlab
+ 1678  docker container rm gitla
+ 1679  docker run --detach --hostname 172.17.0.4 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1680  docker container inspect gitlab
+ 1681  docker container inspect gitlab-runner-docker
+ 1682  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1683  sudo gedit /lib/systemd/system/docker.service
+ 1684  sudo service docker stop
+ 1686  sudo service docker stop
+ 1687  docker info
+ 1688  sudo serice restart docker
+ 1689  sudo service restart docker
+ 1690  sudo service docker restart
+ 1691  docker container inspect gitlab
+ 1692  sudo gedit /lib/systemd/system/docker.service
+ 1693  history | grep docker
+ 1698  cd gitlab-runner-docker/
+ 1703  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1705  docker container inspect gitlab-runner-docker
+ 1706  docker container stop gitlab-runner-docker
+ 1707  docker container start gitlab-runner-docker
+ 1708  docker login localhost:5000
+ 1709  docker pull localhost:5000/my-image-test
+ 1710  docker pull localhost:5000/my-image-test:latest
+ 1711  docker rm localhost:5000/my-image-test:latest
+ 1712  history | grep docker
+ 1713  docker image rm localhost:5000/my-image-test:latest
+ 1714  docker image rm localhost:5000/my-ubuntu
+ 1715  docker image rm localhost:5000/my-image-test:latest
+ 1716  docker image rm -v localhost:5000/my-image-test:latest
+ 1717  docker image rm localhost:5000/my-image-test:latest
+ 1718  docker info
+ 1719  docker container list
+ 1720  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1721  docker container stop gitlab
+ 1722  docker container rm gitlab
+ 1723  docker run --detach --hostname 172.17.0.5 --publish 444:443 --publish 80:80 --publish 22:22 --name gitlab --restart always --volume /srv/gitlab/config:/etc/gitlab:Z --volume /srv/gitlab/logs:/var/log/gitlab:Z --volume /srv/gitlab/data:/var/opt/gitlab:Z gitlab/gitlab-ce:latest
+ 1724  docker exec -it gitlab-runner-docker gitlab-runner register
+ 1725  docker container list
+ 1726  docker container inspect gitlab
+ 1727  docker container inspect gitlab-runner-docker
+ 1728  docker container inspect artifactory
+ 1815  docker container inspect kafka
+ 1816  docker pull maprtech/dev-sandbox-cont
+ 1817  sudo docker pull maprtech/dev-sandbox-cont
+ 1818  sudo docker pull maprtech/dev-sandbox-cont:latest.
+ 1819  sudo docker pull maprtech/dev-sandbox-cont:latest .
+ 1820  sudo docker pull maprtech/dev-sandbox-cont:latest
+ 1821  sudo docker pull maprtech/dev-sandbox-cont
+ 1822  docker pull spotify/kafka
+ 1823  docker run -d -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka --env ADVERTISED_PORT=9092 --name kafka spotify/kafka
+ 1824  docker container stop kafka
+ 1825  docker run --restart always -d -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka --env ADVERTISED_PORT=9092 --name kafka spotify/kafka
+ 1826  docker container stop kafka
+ 1827  docker run -restart always -d -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka --env ADVERTISED_PORT=9092 --name kafka spotify/kafka
+ 1828  history | grep docker
+ 1829  docker run -d -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka --env ADVERTISED_PORT=9092 --name kafka --restart always spotify/kafka
+ 1830  docker container rm kafka
+ 1831  docker run -d -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=kafka --env ADVERTISED_PORT=9092 --name kafka --restart always spotify/kafka
+ 1836  docker container list
+ 1837  docker exec kafka
+ 1838  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication 1 --partitions 1 --topic sit-test
+ 1839  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1840  docker container list
+ 1841  docker container inspect kafka
+ 1842  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1843  docker container inspect kafka
+ 1847  docker container inspect kafka
+ 1848  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1849  docker run -it --rm --link kafka spotify/kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic sit-test --from-beginning
+ 1850  docker run -it --rm --link kafka spotify/kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sit-test --from-beginning
+ 1851  docker run -it --rm --link kafka spotify/kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-console-consumer.sh --bootstrap-server 172.17.0.5:9092 --topic sit-test --from-beginning
+ 1852  docker ocker container inspect kafka
+ 1853  docker container inspect kafka
+ 1854  docker ps
+ 1855  docker container list
+ 1856  docker container stop kafka
+ 1857  docker container rm -v kafka
+ 1859  docker container list
+ 1860  docker pull confluent/kafka
+ 1861  docker run -d --name zookeeper -p 2181:2181 confluent/zookeeper
+ 1862  docker run -d --name kafka -p 9092:9092 --link zookeeper:zookeeper confluent/kafka
+ 1871  docker container list
+ 1872  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1873  docker exec kafka kafka-topics --describe --topic foo --zookeeper localhost:2181
+ 1874  sudo docker exec kafka kafka-topics --describe --topic foo --zookeeper localhost:2181
+ 1875  docker logs zookeeper
+ 1876  docker logs kafka
+ 1877  docker container list
+ 1878  docker container start kafka
+ 1879  docker container start zookeeper
+ 1880  docker container start kafka
+ 1881  docker container list
+ 1882  docker container start kafka
+ 1883  docker container list
+ 1884  docker kafka logs
+ 1885  docker logs kafka
+ 1886  docker list kafka
+ 1887  docker logs kafka
+ 1888  docker exec kafka /opt/kafka_2.11-0.10.1.0/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1891  docker exec kafka confluentinc/cp-kafka:3.1.1/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1892  docker exec kafka /confluentinc/cp-kafka:3.1.1/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1893  docker container inspect kafka
+ 1894  docker exec kafka /usr/local/bin/kafka-docker/kafka-topics.sh --list --zookeeper localhost:2181
+ 1895  docker container start zookeeper
+ 1896  docker container start kafka
+ 1898  docker container list
+ 1899  docker container start kafka
+ 1900  docker container list
+ 1901  docker exec kafka --list topic
+ 1902  docker container instpect
+ 1903  docker container inspect kafka
+ 1912  docker container inspect kafka
+ 1913  docker exec kafka /usr/local/bin/kafka-topics --zookeeper localhost:2181 --list topics
+ 1914  docker exec kafka /usr/local/bin/kafka-topics.sh --list --zookeeper localhost:2181
+ 1915  docker exec kafka kafka-topics --describe --topic test-sit --zookeeper localhost:2181
+ 1916  sudo docker exec kafka kafka-topics --describe --topic test-sit --zookeeper localhost:2181
+ 1917  docker container list
+ 1918  sudo docker exec kafka kafka-topics --describe --topic test-sit --zookeeper localhost:2181
+ 1919  docker container inspect zookeeper
+ 1920  sudo docker exec kafka kafka-topics --describe --topic test-sit --zookeeper 172.17.0.7:2181
+ 1921  docker container inspect kafka
+ 1922  docker container inspect zookeeper
+ 1923  sudo docker exec kafka kafka-topics --describe --topic test-sit --zookeeper 172.17.0.7:2181
+ 1924  docker-compose exec kafka  \
+ 1925  docker exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
+ 1926  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --zookeeper 172.17.0.8:2181
+ 1927  docker container inspect zookeeper
+ 1928  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --zookeeper 172.17.0.7:2181
+ 1929  docker container inspect zookeeper
+ 1930  docker container inspect kafka
+ 1931  sudo docker exec kafka kafka-topics --describe --topic test-sit --zookeeper 172.17.0.7:2181
+ 1932  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1933  sudo docker exec kafka kafka-console-consumer --boostrap-server 172.17.0.8:9092 --topic test-sit-new --from-begining --max-messages 4
+ 1934  sudo docker exec kafka kafka-console-consumer --boostrap-servers 172.17.0.8:9092 --topic test-sit-new --from-begining --max-messages 4
+ 1935  sudo docker exec kafka kafka-console-consumer --bootstrap-servers 172.17.0.8:9092 --topic test-sit-new --from-begining --max-messages 4
+ 1936  sudo docker exec kafka kafka-console-consumer --bootstrap-server 172.17.0.8:9092 --topic test-sit-new --from-begining --max-messages 4
+ 1937  sudo docker exec kafka kafka-console-consumer --bootstrap-server 172.17.0.8:9092 --topic test-sit-new --from-beginning --max-messages 4
+ 1938  sudo docker exec kafka kafka-console-consumer --bootstrap-server 172.17.0.8:9092 --topic test-sit-new --from-beginning --zookeeper 172.17.0.7:2181 --max-messages 4
+ 1939  sudo docker exec kafka kafka-console-consumer --bootstrap-server 172.17.0.8:9092 --topic test-sit-new --from-beginning --max-messages 4
+ 1940  sudo docker exec kafka kafka-console-consumer --bootstrap-server 172.17.0.8:9092 --topic test-sit-new --from-beginning --zookeeper 172.17.0.7:2181 --max-messages 4
+ 1941  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1942  sudo docker exec kafka kafka-topics --delete --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1943  sudo docker exec kafka kafka-topics --delete --topic test-sit --zookeeper 172.17.0.7:2181
+ 1944  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1945  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --zookeeper 172.17.0.7:2181
+ 1946  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1947  sudo docker exec kafka kafka-topics --delete --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1948  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --config retention.ms=100000 --zookeeper 172.17.0.7:2181
+ 1949  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1950  sudo docker exec kafka kafka-topics --delete --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1951  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 3 --if-not-exists --config retention.ms=100000 --zookeeper 172.17.0.7:2181
+ 1952  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 0 --if-not-exists --config retention.ms=100000 --zookeeper 172.17.0.7:2181
+ 1953  docker exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --config retention.ms=100000 --zookeeper 172.17.0.7:2181
+ 1954  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1955  docker container stop zookeeper
+ 1956  docker container start zookeeper
+ 1957  sudo docker exec kafka kafka-topics --describe --topic test-sit-new --zookeeper 172.17.0.7:2181
+ 1961  cd kafka_cluster_docker/
+ 1962  git clone https://github.com/confluentinc/cp-docker-images.git
+ 1963  docker container stop zookeeper
+ 1964  docker container stop kafka
+ 1965  cd cp-docker-images/
+ 1966  docker container list
+ 1967  docker container rm -v kafka
+ 1968  docker container rm -v zookeeper
+ 1973  docker up -d
+ 1974  docker-compose up -d
+ 1975  docker-compose up -d
+ 1976  sudo apt install docker-compose
+ 1977  docker container list
+ 1978  docker-compose container list
+ 1979  docker-compose up -d
+ 1980  docker-compose exec kafka kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --config retention.ms=100000 --zookeeper localhost:32181
+ 1981  docker-compose exec kafka kafka-topics --describe --topic test-sit-new --zookeeper localhost:32181
+ 1982  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic test-sit-new --from-beginning --max-messages 4
+ 1983  docker-compose ps
+ 1984  docker compose stop
+ 1985  docker-compose stop
+ 1986  docker-compose ps
+ 1987  docker run -d --net=host --name=zookeeper -e ZOOKEEPER_CLIENT_PORT=2181 confluentinc/cp-zookeeper:4.1.0
+ 1988  docker container list
+ 1989  docker run -d --net=host --name=kafka -e KAFKA_ZOOKEEPER_CONNECT=localhost:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 confluentinc/cp-kafka:4.1.0
+ 1990  docker container list
+ 1991  docker logs kafka
+ 1992  docker run --net=host --rm confluentinc/cp-kafka:4.1.0 kafka-topics --create --topic test-sit-new --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:2181
+ 1993  docker run --net=host --rm confluentinc/cp-kafka:4.1.0 kafka-topics --describe --topic test-new-sit --zookeeper localhost:2181
+ 1994  docker run --net=host --rm confluentinc/cp-kafka:4.1.0 kafka-topics --describe --topic test-sit-new --zookeeper localhost:2181
+ 1995  docker container list
+ 1996  history | grep docker
+ docker build --tag mapr-test-sit:first .
+ docker run -it --name producer --net=host -i -t mapr-test-sit:first
+

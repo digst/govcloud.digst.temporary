@@ -1,0 +1,23 @@
+
+@context  : https://data.gov.dk/organisation
+id        : https://data.gov.dk/organisation/2C841A3A-B7F3-41F4-B4F3-5F5D3951E00F
+type      : authority
+prefLabel : Arbejdstilsynet
+altLabel  :
+description : Arbejdstilsynet er den danske myndighed på arbejdsmiljøområdet. Arbejdstilsynets formål er at medvirke til at skabe et sikkert, sundt og udviklende arbejdsmiljø på de danske arbejdspladser. Det sker ved at føre tilsyn med virksomhederne, ved at udarbejde regler om arbejdsmiljøforhold samt ved at informere om arbejdsmiljø. Grundlaget for Arbejdstilsynets opgaver er arbejdsmiljøloven med tilhørende bekendtgørelser.
+authorityCode :
+municipalityCode : 
+regionCode :
+businessRegisterCode: 21481815
+productionUnitCode:
+globalLocationNumber: 
+contactpoints :
+    - topic   : '*'
+      channels  :
+       - type     : phone
+         address  : 70121288
+       - type     : email
+         address  : at@at.dk
+       - type     : web
+         address  : http://www.at.dk
+

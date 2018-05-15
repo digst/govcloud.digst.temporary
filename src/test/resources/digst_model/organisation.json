@@ -1,0 +1,29 @@
+"@context":
+{
+  "refLabel": "http://schema.org/name",
+  "refLabel": "http://schema.org/name",
+  "description": "http://schema.org/name",
+  "authorityCode": "",
+  "municipalityCode":  "",
+  "regionCode": "",
+  "businessRegisterCode": "",
+  "productionUnitCode": "",
+  "globalLocationNumber": "",
+  "contactPoints": {
+    "@type": "https://data.gov.dk/contactpoint",
+    "topic": "", #formkode?
+    "channels": {
+      "type": "",
+      "address": "",
+      "openingHours": "https://schema.org/OpeningHours",
+    }
+  },
+  "parents":{
+    "@id": "",
+    "prefLabel":""
+  },
+  "children": {
+    "@id": "",
+    "prefLabel":""
+  }
+}
