@@ -9,8 +9,7 @@ import com.google.common.io.Resources
 import scala.io.Source
 import javax.xml.parsers.{DocumentBuilderFactory, SAXParser, SAXParserFactory}
 
-import app.kafka.RunKafkaProducer
-import oldClasses.RunAppTemp
+import app.parser.XMLHandler
 import org.json.{JSONException, JSONObject, XML}
 import org.xml.sax.Attributes
 import org.xml.sax.helpers.DefaultHandler
@@ -27,10 +26,9 @@ import scala.xml.{Elem, NodeSeq}
 
 class test_main {
 
-  val path:String = Resources.getResource("DIGST/Myndigheder_eksport.xml").getPath
-  val pathSave:String = Resources.getResource("files/").getPath
-  val patCopy:String = Resources.getResource("copy/Myndigheder_eksport.xml").getPath
-  var runApp:RunAppTemp = _
+  val path:String = "/home/datascience/GovcloudData/DIGST/Myndigheder_eksport.xml"
+  val pathFiles:String = "/home/datascience/GovcloudData/files/"
+
 
 
   @Test
@@ -59,7 +57,7 @@ class test_main {
           {
             parrentMessages += line
 
-            saveFile(parrentMessages, pathSave+"/"+fileID +".xml")
+            saveFile(parrentMessages, pathFiles   +"/"+fileID +".xml")
             parrentMessages = ""
             count+=1
           }
@@ -80,30 +78,40 @@ class test_main {
   def parse_single_file(): Unit =
   {
 
-    val file_test = pathSave + "0B47D949-FFA8-48BA-9D26-92F7D441CB66.xml"
+    val file_test = pathFiles + "0B47D949-FFA8-48BA-9D26-92F7D441CB66.xml"
     val parserFactory = SAXParserFactory.newInstance()
     parserFactory.setValidating(true)
     val parser = parserFactory.newSAXParser()
     val file = new File(file_test)
+
     val xMLHandler:XMLHandler = new XMLHandler()
     parser.parse(file, xMLHandler)
-    val res = xMLHandler.seqJSON
-
-
-    for (x <- res)
-      {
-        println(x.toString())
-      }
 
 
 
   }
 
   @Test
+  def parse_single_file_new(): Unit = {
+
+
+    val file_test = pathFiles + "67472A23-44BB-4BD6-AC7F-9AA288334EBB.xml"
+    val parserFactory = SAXParserFactory.newInstance()
+    parserFactory.setValidating(true)
+    val parser = parserFactory.newSAXParser()
+    val file = new File(file_test)
+
+    val xMLHandler:XMLHandler = new XMLHandler()
+    parser.parse(file, xMLHandler)
+
+  }
+
+
+  @Test
   def parse_big_file(): Unit =
   {
 
-    val file_test =patCopy
+    val file_test =path
     val parserFactory = SAXParserFactory.newInstance()
     parserFactory.setValidating(true)
     val parser = parserFactory.newSAXParser()
@@ -118,7 +126,7 @@ class test_main {
 
 
     var PRETTY_PRINT_INDENT_FACTOR = 4
-    var path = Paths.get(pathSave + "0B47D949-FFA8-48BA-9D26-92F7D441CB66.xml")
+    var path = Paths.get(pathFiles + "0B47D949-FFA8-48BA-9D26-92F7D441CB66.xml")
     var TEST_XML_STRING_list = Files.readAllLines(path)
     var str:StringBuilder = StringBuilder.newBuilder
 
@@ -140,36 +148,8 @@ class test_main {
     }
 
 
-    saveFile(res, pathSave+"/"+"Esbjerg_kommune.json")
-
   }
 
-//  @Test
-//  def test_new_class(): Unit = {
-//
-//    val pathConfig:String = Resources.getResource("config").getPath
-//    val pathDataStorage:String = Resources.getResource("database").getPath
-//
-//    val producercf = pathConfig + "/" + "producer.properties"
-//    val topcf = pathConfig + "/" + "topics.properties"
-//
-//
-//    val producer = new RunKafkaProducer(producercf,topcf,pathDataStorage)
-//
-//    val data:List[File] = producer.readData()
-//    var res:String = null
-//
-//    data.foreach(x => {
-//
-//
-//      res = producer.parserData(x.getAbsolutePath)
-//
-//    } )
-//
-//    assert(data.size>0)
-//    assert(res!=null)
-//
-//  }
 
   def saveFile(data:String, fileName:String): Unit = {
 
@@ -183,88 +163,4 @@ class test_main {
 
 }
 
-class XMLHandler extends DefaultHandler
-{
-  val id = "id"
-  val parentid = "parentid"
-  val key = "key"
-  val name = "name"
-  val tfid = "tfid"
-  val typee = "type"
-  val content = "content"
-  val template = "template"
 
-  var tfId_v:String = _
-  var key_v:String = _
-  var types_v:String = _
-  var content_v:String = _
-
-  var isContent:Boolean = false
-  var seqJSON:Seq[JSONObject] = Seq[JSONObject]()
-  var json:JSONObject = _
-  var json1:JSONObject = _
-
-
-
-
-  override def startElement(s: String, s1: String, qName: String, attributes: Attributes): Unit =
-  {
-
-    if (qName.equals("item"))
-      {
-
-        if (json!=null)
-          {
-            seqJSON = seqJSON :+ json
-          }
-
-        json = new JSONObject()
-        val id_v =attributes.getValue(id)
-        val parentId_v = attributes.getValue(parentid)
-        val key_v = attributes.getValue(key)
-        val template_v = attributes.getValue(template)
-//        val name_v = attributes.getValue(name)
-
-        json.put(id, id_v)
-        json.put(parentid, parentId_v)
-        json.put(key, key_v)
-        json.put(template, template_v)
-//        json.put(name, name_v)
-
-
-
-      }
-    if (qName.equals("field"))
-      {
-
-        tfId_v = attributes.getValue(tfid)
-        key_v = attributes.getValue(key)
-        types_v = attributes.getValue(typee)
-
-        json1 = new JSONObject()
-        json1.put(tfid, tfId_v)
-        json1.put(key, key_v)
-        json1.put(typee, types_v)
-
-      }
-    if (qName.equals("content"))
-      {
-
-        isContent=true
-
-      }
-
-  }
-
-  override def characters(ch: Array[Char], start: Int, length: Int): Unit =
-    {
-      if (isContent)
-        {
-          var content_v = new String(ch, start, length)
-          json1.put(content, content_v)
-          json.put(key_v, json1)
-          isContent= false
-        }
-    }
-
-}

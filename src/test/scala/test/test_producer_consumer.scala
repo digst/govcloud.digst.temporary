@@ -5,13 +5,11 @@ import java.util
 import java.util.Properties
 
 import com.google.common.io.Resources
+import com.govcloud.digst.Organisation
 import org.apache.avro.Schema
 import org.apache.kafka.clients.consumer.{ConsumerRecord, ConsumerRecords, KafkaConsumer}
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.junit.{After, Test}
-import raw.data.borgerdk.avro.Mapping
-
-
 import org.apache.avro.generic.GenericData
 import org.apache.avro.generic.GenericRecord
 import org.apache.avro.Schema
@@ -57,32 +55,30 @@ class test_producer_consumer {
   @Test
   def test_avro_producer(): Unit = {
 
-    val topicAvro:String = "avro-test"
+    val topicAvro:String = "com.govcloud.digst.organisation"
     val properties:Properties = readProperties(pathConfigProducer)
-    val producerAvro:KafkaProducer[String, Mapping] = new KafkaProducer[String, Mapping](properties)
+    val producerAvro:KafkaProducer[String, Organisation] = new KafkaProducer[String, Organisation](properties)
 
-    val mapping:Mapping = new Mapping()
-    mapping.setIp("hello man")
-    mapping.setReferrer("my name is peter")
-    mapping.setSessionid(12)
-    mapping.setTimestamp(123435L)
-    mapping.setUrl("www.sss.dk")
-    mapping.setUseragent("no way")
+    val mapping:Organisation = new Organisation()
+    mapping.setName("hello man")
+    mapping.setId("12")
+    mapping.setParentid("11")
+    mapping.setTemplate("www.sss.dk")
+    mapping.setFoaauthorityid("no way")
+    mapping.setExtras(new util.HashMap[CharSequence, CharSequence]())
+
 
     try {
 
 
-      val record:ProducerRecord[String,Mapping] = new ProducerRecord[String,Mapping](topicAvro, mapping)
+      val record:ProducerRecord[String,Organisation] = new ProducerRecord[String,Organisation](topicAvro, mapping)
       producerAvro.send(record)
-
       producerAvro.flush()
-      producerAvro.close()
-
 
     }
     catch
       {
-        case e:Exception => println(e)
+        case e:Exception => println(e.printStackTrace())
       }
 
 
@@ -93,21 +89,23 @@ class test_producer_consumer {
   def test_avro_consumer(): Unit =
   {
 
-    val topicAvro:String = "avro-test"
+    val topicAvro:String = "com.govcloud.digst.organisation"
     val props:Properties = readProperties(pathConfigConsumer)
     var topics:util.ArrayList[String] = new util.ArrayList()
     topics.add(topicAvro)
 
-    val consumerAvro:KafkaConsumer[String, Mapping] = new KafkaConsumer[String, Mapping](props)
+    val consumerAvro:KafkaConsumer[String, Organisation] = new KafkaConsumer[String, Organisation](props)
     consumerAvro.subscribe(topics)
 
     try
     {
       while (true)
       {
-        val records:ConsumerRecords[String,Mapping] = consumerAvro.poll(100)
+        val records:ConsumerRecords[String,Organisation] = consumerAvro.poll(100)
 
         records.forEach(x => {
+
+          val mapping:Organisation = x.value()
 
           println(x.value())
 

@@ -4,8 +4,10 @@ import app.util.UploadFile;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
+import org.xml.sax.SAXException;
 import scala.sys.Prop;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +22,7 @@ public class RunApp {
     private String webAppDir = null;
     private String webConfigXML = null;
 
-    public static void main(String[] args) throws LifecycleException, IOException {
+    public static void main(String[] args) throws LifecycleException, IOException, ParserConfigurationException, SAXException {
 
         if (args.length<1)
         {
@@ -35,7 +37,7 @@ public class RunApp {
     }
 
 
-    public void run() throws LifecycleException, IOException {
+    public void run() throws LifecycleException, IOException, ParserConfigurationException, SAXException {
 
 
         Properties producerProps = readProperties(producerConfig);

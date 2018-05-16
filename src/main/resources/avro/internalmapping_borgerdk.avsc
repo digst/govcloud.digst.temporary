@@ -1,0 +1,24 @@
+{"namespace": "com.govcloud.digst",
+  "type": "record",
+  "name": "Organisation",
+  "doc" : "Represents an Organisation",
+  "fields": [
+    {"name": "name", "type": "string", "doc": "The name of the community"},
+    {"name": "id", "type": "string"},
+    {"name": "parentid", "type": "string"},
+    {"name": "template", "type": "string"},
+    {"name": "cvr", "type": ["null", "string"], "default" : null},
+    {"name": "foaauthorityid", "type": ["null", "string"], "default" : null},
+    {"name": "email", "type": ["null", "string"], "default" : null},
+    {"name": "website", "type": ["null", "string"], "default" : null},
+    {"name": "telephonenumber", "type": ["null", "string"], "default" : null},
+    {"name": "housenumber", "type": ["null", "string"], "default" : null},
+    {"name": "streetname", "type": ["null", "string"], "default" : null},
+    {"name": "postcode", "type": ["null", "string"], "default" : null},
+    {"name": "district", "type": ["null", "string"], "default" : null},
+    {"name": "faxnumber", "type": ["null", "string"], "default" : null},
+    {"name": "municipalitycode", "type": ["null", "string"], "default" : null},
+    {"name": "extras", "type": {"type": "map", "values": "string"} }
+
+  ]
+}

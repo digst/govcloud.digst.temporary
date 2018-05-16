@@ -1,17 +1,21 @@
 package app.util;
 
-import app.kafka.RunKafkaProducer;
+import app.parser.XMLHandler;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.FileUtils;
+import org.xml.sax.SAXException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,17 +29,24 @@ public class UploadFile extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private ServletFileUpload uploader = null;
     private String pathToData = null;
-    private RunKafkaProducer runKafkaProducer = null;
+    private SAXParserFactory parserFactory = null;
+    private SAXParser parser = null;
+    private XMLHandler xmlHandler = null;
+
 
     public UploadFile()
     {
 
     }
 
-    public UploadFile(String pathToData, Properties propertiesProducerConfig, Properties propertiesTopicConfig)
-    {
+    public UploadFile(String pathToData, Properties propertiesProducerConfig, Properties propertiesTopicConfig) throws ParserConfigurationException, SAXException {
         this.pathToData = pathToData;
-        this.runKafkaProducer = new RunKafkaProducer(propertiesProducerConfig,propertiesTopicConfig, pathToData);
+        this.parserFactory = SAXParserFactory.newInstance();
+        parserFactory.setValidating(true);
+        this.parser = parserFactory.newSAXParser();
+        xmlHandler = new XMLHandler();
+        xmlHandler.setup(propertiesProducerConfig, propertiesTopicConfig);
+
     }
 
 
@@ -79,22 +90,27 @@ public class UploadFile extends HttpServlet {
                 out.write("File "+fileItem.getName().toUpperCase()+ " uploaded successfully.");
                 out.write("<br>");
                 //out.write("<a href=\"UploadDownloadFileServlet?fileName="+fileItem.getName()+"\">Download "+fileItem.getName()+"</a>");
-
-                this.runKafkaProducer.produceData();
+                parseData(pathToData);
 
             }
         } catch (FileUploadException e) {
             out.write("Exception in uploading file.");
         } catch (Exception e) {
+            e.printStackTrace();
             out.write("Exception in uploading file.");
         } finally {
 
             out.write("</body></html>");
-
             FileUtils.cleanDirectory(new File(pathToData));
-
-
         }
+    }
+
+
+    public void parseData(String pathToData) throws SAXException, IOException {
+
+        File filePath = new File(pathToData);
+        File f = filePath.listFiles()[0];
+        parser.parse(f, xmlHandler);
     }
 
 
