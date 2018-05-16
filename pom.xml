@@ -20,7 +20,7 @@
         </repository>
         <repository>
             <id>confluent-maven</id>
-            <url>http://packages.confluent.io/maven/</url>
+            <url>http://packages.confluent.io/maven</url>
             <releases><enabled>true</enabled></releases>
             <snapshots><enabled>false</enabled></snapshots>
         </repository>
@@ -33,7 +33,7 @@
         <mapr-streams-version>1.0.1-mapr-streams-6.0.1</mapr-streams-version>
         <jetty-version>9.4.1.v20170120</jetty-version>
         <tomcat-version>8.5.23</tomcat-version>
-        <avro.version>1.7.7</avro.version>
+        <avro.version>1.8.2</avro.version>
         <confluent.version>3.1.1</confluent.version>
     </properties>
 
