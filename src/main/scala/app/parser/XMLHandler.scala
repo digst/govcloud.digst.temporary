@@ -48,8 +48,8 @@ class XMLHandler() extends DefaultHandler
         }
 
       avroOrg = new Organisation()
-      val id_v =attributes.getValue(id)
-      val parentId_v = attributes.getValue(parentid)
+      var id_v = replaceChars(attributes.getValue(id))
+      var parentId_v = replaceChars(attributes.getValue(parentid))
       val template_v = attributes.getValue(template)
       val name_v = attributes.getValue(name)
 
@@ -106,6 +106,15 @@ class XMLHandler() extends DefaultHandler
   def produceData(record:Organisation): Unit =
   {
     producer.produceData(record)
+  }
+
+  def replaceChars(data:String): String ={
+
+    var d = data.replace("{","")
+    d = d.replace("}","")
+    d
+
+
   }
 
 }
